@@ -4,9 +4,10 @@ frontend/dist/
 frontend/.env
 
 # backend
-backend/node_modules/
-backend/.env
-backend/uploads/
+Backend/node_modules/
+Backend/.env
+Backend/uploads/
+Backend/package-lock.json
 
 # common
 .env
