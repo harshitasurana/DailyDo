@@ -1,0 +1,13 @@
+# frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# backend
+backend/node_modules/
+backend/.env
+backend/uploads/
+
+# common
+.env
+.vscode
