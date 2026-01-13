@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(135deg, #020617, #0f172a); /* DailyDo dark */
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+/* Nav list */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+/* Links */
+nav ul li a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 4px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: #38bdf8; /* DailyDo blue */
+}
+
+/* Underline animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Page Wrapper */
+.add-task-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card */
+.add-task-card {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 40px 50px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    border: 1px solid rgba(56,189,248,0.15);
+}
+
+/* Heading */
+.add-task-card h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #e0f2fe;
+}
+
+/* Inputs */
+.add-task-card input,
+.add-task-card textarea {
+    width: 100%;
+    background: rgba(2, 6, 23, 0.9);
+    border: 1px solid rgba(56,189,248,0.2);
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #e5e7eb;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Textarea */
+.add-task-card textarea {
+    margin-top: 15px;
+    resize: none;
+    height: 120px;
+}
+
+/* Focus */
+.add-task-card input:focus,
+.add-task-card textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.25);
+}
+
+/* Button */
+.add-task-card button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+    transition: 0.3s ease;
+}
+
+.add-task-card button:hover {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    transform: translateY(-2px);
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.4rem;
+    color: rgba(15, 23, 42, 0.7);
+}
+
+/* Main List Container */
+.task-list {
+}
+
+/* Task Card */
+.task-item {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(2, 6, 23, 0.85);;
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(56,189,248,0.15);
+
+
+    /* background: rgba(2, 6, 23, 0.85);
+    padding: 20px 24px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(56,189,248,0.12);
+    transition: 0.3s ease; */
+}
+
+.task-item:hover {
+    transform: translateY(-4px);
+    /* box-shadow: 0 10px 20px rgba(56,189,248,0.2); */
+}
+
+/* Task Title */
+.task-item h2 {
+    font-size: 1.4rem;
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+/* Task Description */
+.task-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+/* Action Buttons Container */
+.task-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effects */
+.edit-btn:hover {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    transform: translateY(-2px);
+}
+
+
